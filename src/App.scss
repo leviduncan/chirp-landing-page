@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+// Main Variables
+$primary-blue: #1DA1F2;
+$secondary-blue: #D7F5F5;
+$dark-teal: #3585A1;
+$dark-blue: #14548C;
+$electric-green: #2ED8AF;
+$dark-gray: #757575;
+$light-beige: #FBF8F3;
+$soft-red: #DF1414;
+$orange-dance: #FFAD23;
+
+
+
+body {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    font-family: Inter, sans-serif;
+
+
+    .navbar {
+        .navbar-brand {
+            font-weight: 700;
+            font-style: italic;
+            color: $primary-blue;
+        }
+        .navbar-nav {
+            .nav-item {
+                .btn {
+                    @media (min-width: 991px) {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Nav
+    .bg-beige {
+        background-color: $light-beige;
+    }
+
+    // Hero
+
+    .hero {
+        background-color: $light-beige;
+        height: 100vh;
+    }
+}
