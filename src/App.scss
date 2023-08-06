@@ -14,16 +14,36 @@ $orange-dance: #FFAD23;
 
 
 body {
+    font-family: Inter, sans-serif;
+
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
 
-    font-family: Inter, sans-serif;
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+
+    // Utilities
+    .full {
+        display: block;
+        width: 100%;
+
+        @media (min-width: 992px){
+            display: unset;
+            width: unset;
+        }
+    }
 
 
     .navbar {
+        padding: 30px 0;
         .navbar-brand {
             font-weight: 700;
             font-style: italic;
@@ -38,6 +58,17 @@ body {
                 }
             }
         }
+        .navbar-toggler, .navbar-toggler:focus {
+            padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+            font-size: var(--bs-navbar-toggler-font-size);
+            /* line-height: 1; */
+            color: var(--bs-navbar-color);
+            background-color: transparent;
+            border: unset !important;
+            border-radius: unset;
+            transition: var(--bs-navbar-toggler-transition);
+            box-shadow: unset;
+        }
     }
 
     // Nav
@@ -49,6 +80,65 @@ body {
 
     .hero {
         background-color: $light-beige;
-        height: 100vh;
+        padding: 10px 15px 40px;
+        border: solid 1px red;
+        max-height: 100vh;
+
+        .heroContent {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+
+            // @media (min-width: 992px){
+            //     flex-direction: row;
+            // }
+
+            .contentLeft {
+                width: 100%;
+                padding: 30px 0;
+                
+                h1 {
+                    font-size: 8vw;
+                    width: 90%;
+
+                    @media (max-width: 768px) and (min-width: 992px){
+                        width: 90%;
+                        font-size: 3rem;
+                    }
+
+                    @media (min-width: 992px){
+                        width: 90%;
+                        font-size: 3rem;
+                    }
+
+                    @media (min-width: 1200px){
+                        width: 90%;
+                        font-size: 4rem;
+                    }
+
+                }
+
+                a {
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: $dark-teal !important;
+                }
+
+                @media (min-width: 992px){
+                    width: 60%;
+                }
+            }
+            .contentRight {
+
+                picture img {
+                    object-fit: contain;
+                    width: 100%;
+
+                    @media (min-width: 992px){
+                    max-height: 650px;
+                    }
+                }
+            }
+        }
     }
 }

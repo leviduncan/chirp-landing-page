@@ -1,14 +1,12 @@
 import React from 'react'
+import ContentLeft from './ContentLeft'
+import ContentRight from './ContentRight'
 
 function HeroContent() {
   return (
-    <div className='d-flex '>
-      <div className="contentLeft">
-        Left Content, Holla!
-      </div>
-        <div className="contentRight">
-          This is on the Right!
-        </div>
+    <div className='heroContent d-flex flex-column-reverse flex-lg-row mb-3'>
+      <ContentLeft />
+      <ContentRight />
     </div>
   )
 }

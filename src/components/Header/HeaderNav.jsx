@@ -1,28 +1,32 @@
 import React from 'react'
-import { FaTwitter } from 'react-icons/fa';
+import TwitterBtn from './TwitterBtn'
+import { Link } from 'react-router-dom'
+import Menu from '../../assets/Hamburger Menu.svg'
 
 function HeaderNav() {
+    
+    const myTitle = "Sign in with Twitter"
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-beige">
                 <div className="container">
-                    <a className="navbar-brand" href="#">Chirp.</a>
+                    <Link className="navbar-brand" to="/">Chirp.</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className=""><img src={ Menu } /></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Pricing</a>
+                                <Link className="nav-link" to="/">Pricing</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">FAQ</a>
+                                <Link className="nav-link" to="/">FAQ</Link>
                             </li>
-                            <li class="nav-item">
-                                <a className="btn btn-primary" aria-current="page" href="#"><FaTwitter /> Sign in with Twitter</a>
+                            <li className="nav-item">
+                                <TwitterBtn text={myTitle} />
                             </li>
                         </ul>
                     </div>
