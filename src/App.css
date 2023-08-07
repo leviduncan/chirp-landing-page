@@ -52,9 +52,18 @@ body .bg-beige {
 }
 body .hero {
   background-color: #FBF8F3;
-  padding: 10px 15px 40px;
-  border: solid 1px red;
-  max-height: 100vh;
+  padding: 10px 15px 0px;
+}
+@media (min-height: 992px) {
+  body .hero {
+    height: 100vh;
+    padding: 10px 15px 60px;
+  }
+}
+@media (min-width: 992px) {
+  body .hero .heroContent {
+    justify-content: space-between;
+  }
 }
 body .hero .heroContent .contentLeft {
   width: 100%;
