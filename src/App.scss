@@ -10,11 +10,13 @@ $dark-gray: #757575;
 $light-beige: #FBF8F3;
 $soft-red: #DF1414;
 $orange-dance: #FFAD23;
+$black: #111;
 
 
 
 body {
     font-family: Inter, sans-serif;
+    color: $dark-gray;
 
     * {
         box-sizing: border-box;
@@ -27,6 +29,26 @@ body {
         margin-bottom: .5rem;
         font-weight: 700;
         line-height: 1.2;
+        color: $black;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background: $primary-blue;
+        border: solid 2px $primary-blue;
+
+
+
+    }        
+    
+    .btn {
+    :hover {
+            color: $primary-blue;
+            background: #fff;
+            border: solid 2px $primary-blue;
+
+        }
+
     }
 
 
@@ -41,7 +63,13 @@ body {
         }
     }
 
+    .text-teal {
+        color: $dark-teal;
+    }
 
+
+
+    // Nav
     .navbar {
         padding: 30px 0;
         .navbar-brand {
@@ -51,10 +79,25 @@ body {
         }
         .navbar-nav {
             .nav-item {
+
+                .nav-link {
+                padding: 10px;
+
+                :hover, :focus {
+                    color: $secondary-blue !important;
+                }
+                }
                 .btn {
                     @media (min-width: 991px) {
                         margin-left: 8px;
                     }
+                }
+            }
+
+            @media (min-width: 992px) {
+                .navbar-expand-lg .navbar-nav {
+                    flex-direction: row;
+                    align-items: center;
                 }
             }
         }
@@ -71,16 +114,17 @@ body {
         }
     }
 
-    // Nav
+
     .bg-beige {
         background-color: $light-beige;
     }
+
 
     // Hero
 
     .hero {
         background-color: $light-beige;
-        padding: 10px 15px 0px;
+        padding: 10px 15px 30px;
 
         @media (min-height: 992px) {
             height: 100vh;
@@ -127,6 +171,16 @@ body {
                     color: $dark-teal !important;
                 }
 
+                .avatar-group {
+                    display: flex;
+
+                    .avatars {
+                        width: 24px;
+                        height: 18px;
+                        
+                    }
+                }
+
                 @media (min-width: 992px){
                     width: 60%;
                 }
@@ -142,6 +196,40 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    // Features
+
+    .features {
+        padding: 60px 0;
+
+        h2 {
+            width: 100%;
+
+            @media (min-width: 461px){
+                width: 290px;
+            }
+
+            @media (min-width: 1070px){
+                width: 360px;
+            }
+        }
+        
+        .card-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin: 40px 0;
+
+
+               .card-grid_card {
+                width: 100%;
+
+                @media (min-width: 1200px) {
+                    width: 49%;
+                }
+               } 
         }
     }
 }

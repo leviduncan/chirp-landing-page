@@ -4,7 +4,7 @@ import { FaTwitter } from 'react-icons/fa';
 function TwitterBtn(props) {
     const { text } = props
   return (
-        <button className="btn btn-primary py-2 px-3 full">
+        <button className="btn btn-primary btn-lg py-2 px-3 full">
             <FaTwitter /> {text}
         </button>
   )
