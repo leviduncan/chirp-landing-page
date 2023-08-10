@@ -67,6 +67,18 @@ body {
         color: $dark-teal;
     }
 
+    .card-grid_card {
+        width: 100%;
+
+        .title {
+            color:$black;
+        }
+
+        @media (min-width: 1200px) {
+            width: 49%;
+        }
+       } 
+
 
 
     // Nav
@@ -216,20 +228,32 @@ body {
             }
         }
         
-        .card-grid {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-                margin: 40px 0;
+    }
 
+    // Testimonials
+    .testimonials {
+        background: $secondary-blue;
+        padding: 60px 0;
 
-               .card-grid_card {
-                width: 100%;
-
-                @media (min-width: 1200px) {
-                    width: 49%;
-                }
-               } 
+        .face {
+            width: 70px;
         }
+
+        .tag {
+            font-size: 12px;
+        }
+
+       
+    }
+    // Price
+    .price {
+        background: #fff;
+        padding: 60px 0;
+    }
+
+    // Footer
+    .footer {
+        background: $secondary-blue;
+        padding: 60px 0;
     }
 }
