@@ -17,6 +17,7 @@ $black: #111;
 body {
     font-family: Inter, sans-serif;
     color: $dark-gray;
+    
 
     * {
         box-sizing: border-box;
@@ -40,16 +41,6 @@ body {
 
 
     }        
-    
-    .btn {
-    :hover {
-            color: $primary-blue;
-            background: #fff;
-            border: solid 2px $primary-blue;
-
-        }
-
-    }
 
 
     // Utilities
@@ -74,10 +65,21 @@ body {
             color:$black;
         }
 
+        img {
+            width: 40px;
+        }
+
         @media (min-width: 1200px) {
             width: 49%;
         }
        } 
+
+       .brand {
+        font-weight: 700;
+        font-style: italic;
+        color: $primary-blue;
+        text-decoration: none;
+    }
 
 
 
@@ -136,7 +138,7 @@ body {
 
     .hero {
         background-color: $light-beige;
-        padding: 10px 15px 30px;
+        padding: 20px 15px 30px;
 
         @media (min-height: 992px) {
             height: 100vh;
@@ -144,9 +146,6 @@ body {
         }
 
         .heroContent {
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
 
             @media (min-width: 992px){
                 justify-content: space-between;
@@ -181,6 +180,8 @@ body {
                     font-weight: 700;
                     text-decoration: none;
                     color: $dark-teal !important;
+
+                    
                 }
 
                 .avatar-group {
@@ -249,11 +250,41 @@ body {
     .price {
         background: #fff;
         padding: 60px 0;
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+
+            h1 {
+
+                span {
+                    font-size: 16px;
+                    color: unset;
+                    font-weight: 400;
+                }
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: start;
+                    margin-bottom: 15px;
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 
     // Footer
     .footer {
         background: $secondary-blue;
         padding: 60px 0;
+        color: #000;
+
     }
 }

@@ -20,11 +20,6 @@ body .btn-primary {
   background: #1DA1F2;
   border: solid 2px #1DA1F2;
 }
-body .btn :hover {
-  color: #1DA1F2;
-  background: #fff;
-  border: solid 2px #1DA1F2;
-}
 body .full {
   display: block;
   width: 100%;
@@ -44,10 +39,19 @@ body .card-grid_card {
 body .card-grid_card .title {
   color: #111;
 }
+body .card-grid_card img {
+  width: 40px;
+}
 @media (min-width: 1200px) {
   body .card-grid_card {
     width: 49%;
   }
+}
+body .brand {
+  font-weight: 700;
+  font-style: italic;
+  color: #1DA1F2;
+  text-decoration: none;
 }
 body .navbar {
   padding: 30px 0;
@@ -90,7 +94,7 @@ body .bg-beige {
 }
 body .hero {
   background-color: #FBF8F3;
-  padding: 10px 15px 30px;
+  padding: 20px 15px 30px;
 }
 @media (min-height: 992px) {
   body .hero {
@@ -186,7 +190,28 @@ body .price {
   background: #fff;
   padding: 60px 0;
 }
+body .price .container {
+  max-width: 400px;
+  width: 100%;
+}
+body .price .container h1 span {
+  font-size: 16px;
+  color: unset;
+  font-weight: 400;
+}
+body .price .container ul {
+  list-style: none;
+}
+body .price .container ul li {
+  display: flex;
+  align-items: start;
+  margin-bottom: 15px;
+}
+body .price .container ul li p {
+  margin-left: 10px;
+}
 body .footer {
   background: #D7F5F5;
   padding: 60px 0;
+  color: #000;
 }/*# sourceMappingURL=App.css.map */

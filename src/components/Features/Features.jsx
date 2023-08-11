@@ -33,9 +33,9 @@ function Features() {
         <div className="card-grid d-flex flex-wrap gap-3 my-4">
         {
           data.map((features, idx) => (
-            <Card className="card-grid_card" key={idx}>
+            <Card className="card-grid_card d-flex flex-column" key={idx} height={'auto'}>
               <img src={features.img} alt="" />
-              <h5 className="title">{features.title}</h5>
+              <h5 className="title my-3">{features.title}</h5>
               <p>{features.content}</p>
             </Card>
           ))

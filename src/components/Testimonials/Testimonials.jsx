@@ -35,9 +35,9 @@ function Testimonials() {
         <div className="testimonials">
             <div className="container">
                 <h2>What our customers say</h2>
-                <div className="card-grid d-flex gap-3 my-4">
+                <div className="card-grid d-flex gap-3 my-4 flex-column flex-md-row">
                     {
-                        data.map((features, idx) => (
+                        data.map((testimony, idx) => (
                             <Card 
                             className="card-grid_card" 
                             key={idx}
@@ -45,17 +45,17 @@ function Testimonials() {
                             >
                                 <div className="d-flex justify-content-between align-items-center py-2">
                                 <div className="d-flex align-items-center">
-                                    <img src={features.img} alt={features.name} className="face p-1"/>
+                                    <img src={testimony.img} alt={testimony.name} className="face p-1"/>
                                     <div>
-                                    <p className="title"><strong>{features.name}</strong></p>
-                                    <p className="tag">{features.tag}</p>
+                                    <p className="title"><strong>{testimony.name}</strong></p>
+                                    <p className="tag">{testimony.tag}</p>
                                     </div>
                                 </div>
                                 <div>
                                     <img src={twitblu} alt="Twitter Blue Logo" />
                                 </div>
                                 </div>
-                                <p className="d-flex flex-1">{features.say}</p>
+                                <p className="d-flex flex-1">{testimony.say}</p>
                                 <div className="d-flex justify-content-between py-3">
                                     <Counter />
                                     <RandomDate />

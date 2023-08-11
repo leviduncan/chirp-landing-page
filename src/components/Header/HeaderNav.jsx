@@ -1,7 +1,9 @@
 import React from 'react'
-import TwitterBtn from './TwitterBtn'
 import { Link } from 'react-router-dom'
+import TwitterBtn from './TwitterBtn'
 import Menu from '../../assets/Hamburger Menu.svg'
+import Logo from '../Logo/Logo'
+
 
 function HeaderNav() {
     
@@ -10,7 +12,7 @@ function HeaderNav() {
         <div>
             <nav className="navbar navbar-expand-lg bg-beige">
                 <div className="container">
-                    <Link className="navbar-brand" to="/">Chirp.</Link>
+                <Logo>Chirp.</Logo>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className=""><img src={ Menu } /></span>
                     </button>
